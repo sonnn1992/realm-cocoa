@@ -63,6 +63,10 @@
     return [super initWithRealm:realm schema:schema];
 }
 
+- (void)didInitWithRealm:(RLMRealm *const _Nonnull __unsafe_unretained)realm value:(id)value {
+    [super didInitWithRealm:realm value:value];
+}
+
 #pragma mark - Convenience Initializers
 
 - (instancetype)initWithValue:(id)value {

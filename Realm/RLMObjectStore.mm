@@ -172,6 +172,7 @@ RLMObjectBase *RLMCreateObjectInRealmWithValue(RLMRealm *realm, NSString *classN
         @throw RLMException(e);
     }
     RLMInitializeSwiftAccessorGenerics(object);
+    [object didInitWithRealm:realm value:value];
     return object;
 }
 

@@ -173,6 +173,8 @@ id RLMCreateManagedAccessor(Class cls, __unsafe_unretained RLMRealm *realm, RLMC
     return [super valueForKey:key];
 }
 
+- (void)didInitWithRealm:(RLMRealm *const _Nonnull __unsafe_unretained)realm value:(id)value {}
+
 // Generic Swift properties can't be dynamic, so KVO doesn't work for them by default
 - (id)valueForUndefinedKey:(NSString *)key {
     if (Ivar ivar = _objectSchema[key].swiftIvar) {

@@ -33,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 // live accessor initializer
 - (instancetype)initWithRealm:(__unsafe_unretained RLMRealm *const)realm
                        schema:(RLMObjectSchema *)schema NS_DESIGNATED_INITIALIZER;
+- (void)initWithRealm:(__unsafe_unretained RLMRealm *const)realm
+                value:(id)value;
 
 // shared schema for this class
 + (nullable RLMObjectSchema *)sharedSchema;
