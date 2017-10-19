@@ -83,7 +83,7 @@ open class Object: RLMObjectBase, ThreadConfined, RealmCollectionValue {
 
      - see: `Realm().add(_:)`
      */
-    public override required init() {
+    public required override init() {
         super.init()
     }
 
@@ -102,7 +102,7 @@ open class Object: RLMObjectBase, ThreadConfined, RealmCollectionValue {
 
      - parameter value:  The value used to populate the object.
      */
-    public init(value: Any) {
+    public required init(value: Any) {
         super.init(value: value, schema: .partialPrivateShared())
     }
 
