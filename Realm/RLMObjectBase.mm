@@ -138,7 +138,7 @@ static id validatedObjectForProperty(__unsafe_unretained id const obj,
             id obj = RLMValidatedValueForProperty(value, prop.name, _objectSchema.className);
 
             // don't set unspecified properties
-            if (!obj) {
+            if (!obj || [obj isEqual:[NSNull null]]) {
                 continue;
             }
 
